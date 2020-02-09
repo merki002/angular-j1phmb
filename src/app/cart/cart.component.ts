@@ -7,7 +7,7 @@ import { CartService } from '../cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-  export class CartComponent implements OnInit {
+ export class CartComponent implements OnInit {
   items;
   checkoutForm;
 
@@ -15,6 +15,10 @@ import { CartService } from '../cart.service';
     private cartService: CartService,
     private formBuilder: FormBuilder,
   ) {
+    this.checkoutForm = this.formBuilder.group({
+      name: '',
+      address: ''
+    });
   }
 
   ngOnInit() {
