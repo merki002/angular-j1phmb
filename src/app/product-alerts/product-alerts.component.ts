@@ -8,11 +8,7 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./product-alerts.component.css']
 })
 
-export class ProductAlertsComponent implements OnInit {
+export class ProductAlertsComponent {
   @Input() product;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Output() notify = new EventEmitter();
 }
